@@ -50,13 +50,13 @@ const Card: React.FC<CardProps> = ({
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Button
-              className={`${detail.applyType !== "quickApply" && "hidden"} 
+              className={`${detail.applyType === "externalApply" && "hidden"} 
               border border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white font-medium py-2 px-4 rounded-md`}
             >
               Apply Now
             </Button>
             <Button
-              className={`${detail.applyType !== "externalApply" && "hidden"} 
+              className={`${detail.applyType === "quickApply" && "hidden"} 
               h-[42px] border border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white font-medium py-2 px-4 rounded-md`}
             >
               External Apply
